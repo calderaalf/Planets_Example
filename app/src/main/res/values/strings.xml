@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Planets!!</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string name="title_activity_new_planet">NewPlanet</string>
+    <string name="title_activity_config">ConfigActivity</string>
+    <string name="title_activity_travel">TravelActivity</string>
+    <string name="title_activity_attack">AttackActivity</string>
+
+    <string name="planet_name_label">Name: </string>
+    <string name="planet_mass_label">Mass: </string>
+    <string name="planet_gravity_label">Gravity: </string>
+    <string name="planet_colonies_label">Colonies: </string>
+    <string name="planet_population_label">Population: </string>
+    <string name="planet_military_label">Military: </string>
+    <string name="planet_bases_label">Bases: </string>
+    <string name="planet_forcefield_label">Forcefield: </string>
+
+    <string name="menu_add_planet">Add a New Planet</string>
+    <string name="menu_config_planet">Configure Planet</string>
+    <string name="menu_travel_planet">Travel to Planet</string>
+    <string name="menu_attack_planet">Attack Planet</string>
+    <string name="menu_home_planet">Show Home Planet</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="content_desc_earth">Earth</string>
+    <string name="content_desc_mars">Mars</string>
+    <string name="content_desc_venus">Venus</string>
+    <string name="content_desc_jupiters">Jupiter</string>
+    <string name="content_desc_saturn">Saturn</string>
+    <string name="content_desc_neptune">Neptune</string>
+    <string name="content_desc_exit">Exit to Home Planet</string>
+
+    <string name="button_name_colonies">Add Colonies</string>
+    <string name="button_name_colonists">Add Colonist</string>
+    <string name="button_name_bases">Add Bases</string>
+    <string name="button_name_military">Add Military</string>
+    <string name="button_name_ffon">Forcefield On</string>
+    <string name="button_name_ffoff">Forcefield Off</string>
+    <string name="button_name_done">Done</string>
+    <string name="button_name_return">Return</string>
+
+    <string name="content_desc_bomb">Bomb the planet</string>
+    <string name="content_desc_invade">Invade the planet</string>
+    <string name="content_desc_virus">Infect the planet with Virus</string>
+    <string name="content_desc_laser">Fire Laser at Planet</string>
+
+
+
+</resources>
