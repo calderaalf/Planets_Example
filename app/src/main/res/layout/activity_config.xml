@@ -1,44 +1,67 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:layout_height="match_parent" android:orientation="horizontal" >
 
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="220px"
+        android:layout_height="match_parent" android:orientation="vertical" >
+        <Button
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/button_name_colonies" android:id="@+id/coloniesButton" />
+        <Button
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/button_name_colonists" android:id="@+id/colonistsButton" />
+        <Button
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/button_name_bases" android:id="@+id/basesButton" />
+        <Button
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/button_name_military" android:id="@+id/militaryButton" />
+        <Button
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/button_name_ffon" android:id="@+id/coloniesFfon" />
+        <Button
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/button_name_ffoff" android:id="@+id/coloniesFfoff" />
+        <Button
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/button_name_done" android:id="@+id/doneButton" />
+    </LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_name_colonies"
-        android:id="@+id/coloniesButton" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_name_colonists"
-        android:id="@+id/colonistsButton" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_name_bases"
-        android:id="@+id/basesButton" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_name_military"
-        android:id="@+id/coloniesMilitary" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:orientation="vertical" >
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_name_ffon"
-        android:id="@+id/coloniesFfon" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_name_ffoff"
-        android:id="@+id/coloniesFfoff" />
+        <EditText
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:id="@+id/editTextColonies" android:inputType="number" android:ems="12"
+            android:layout_marginTop="12dp" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_name_done"
-        android:id="@+id/doneButton" />
+        <EditText
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:id="@+id/editTextColonist" android:inputType="number" android:ems="12"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:id="@+id/editTextBases" android:inputType="number" android:ems="12"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:id="@+id/editTextMilitary" android:inputType="number" android:ems="12"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:id="@+id/editTextForcefieldOn" android:inputType="text" android:ems="12"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:id="@+id/editTextForcefieldOff" android:inputType="text" android:ems="12"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+
 </LinearLayout>

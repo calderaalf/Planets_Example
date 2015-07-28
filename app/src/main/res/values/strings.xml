@@ -46,6 +46,7 @@
     <string name="content_desc_virus">Infect the planet with Virus</string>
     <string name="content_desc_laser">Fire Laser at Planet</string>
 
+    <string name="add_planet_caption">Click Planet to Add</string>
 
 
 </resources>

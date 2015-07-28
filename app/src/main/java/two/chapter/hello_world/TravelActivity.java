@@ -5,8 +5,11 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+import android.widget.VideoView;
 
 
 public class TravelActivity extends ActionBarActivity {
@@ -15,11 +18,13 @@ public class TravelActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_travel);
-        Button returnButton = (Button)findViewById(R.id.returnButton);
-        returnButton.setOnClickListener(new View.OnClickListener() {
+        VideoView travelVideo =(VideoView)findViewById(R.id.travelVideoView);
+        travelVideo.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View v) {
+            public boolean onTouch(View v, MotionEvent event) {
+                Toast.makeText(TravelActivity.this,"Going Home!!!",Toast.LENGTH_LONG).show();
                 finish();
+                return true;
             }
         });
     }

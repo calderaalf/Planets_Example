@@ -6,7 +6,9 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 
 public class NewPlanet extends ActionBarActivity {
@@ -17,11 +19,22 @@ public class NewPlanet extends ActionBarActivity {
         setContentView(R.layout.activity_new_planet);
 
         ImageView marsImage = (ImageView)findViewById(R.id.imageMars);
+        Button doneButton = (Button)findViewById(R.id.doneAddingButton);
+
+
         marsImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 WorldGen mars = new WorldGen("Mars",642,3.7);
                 mars.setPlanetColonies(1);
+                Toast.makeText(NewPlanet.this,"Mars Created",Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        doneButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 finish();
             }
         });

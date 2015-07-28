@@ -1,44 +1,84 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent" android:orientation="horizontal"
+    android:background="#00000000">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="70dp"
+        android:layout_height="match_parent" android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
+        <ImageButton
+            android:id="@+id/bombButton"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:contentDescription="@string/content_desc_bomb" android:src="@drawable/attackbomb"
+            android:layout_margin="9dp" android:background="#00000000"
+            android:soundEffectsEnabled="true"/>
+
+        <ImageButton
+            android:id="@+id/invadeButton"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:contentDescription="@string/content_desc_invade" android:src="@drawable/attackinvade"
+            android:layout_margin="9dp" android:background="#00000000"
+            android:soundEffectsEnabled="true"/>
+
+        <ImageButton
+            android:id="@+id/infectButton"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:contentDescription="@string/content_desc_virus" android:src="@drawable/attackvirus"
+            android:layout_margin="9dp" android:background="#00000000"
+            android:soundEffectsEnabled="true"/>
+
+        <ImageButton
+            android:id="@+id/laserButton"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:contentDescription="@string/content_desc_laser" android:src="@drawable/attacklaser"
+            android:layout_margin="9dp" android:background="#00000000"
+            android:soundEffectsEnabled="true"/>
+
+        <ImageButton
+            android:id="@+id/exitButton"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:contentDescription="@string/content_desc_exit" android:src="@drawable/attackexit"
+            android:layout_margin="9dp" android:background="#00000000"
+            android:soundEffectsEnabled="true"/>
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textColor="#FFFFFF" android:textSize="18sp"
+            android:text="@string/title_activity_attack"/>
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textColor="#FFFFBB" android:textSize="25sp"
+            android:text="@string/content_desc_bomb" android:layout_marginLeft="8dp"
+            android:layout_marginTop="18dp"/>
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textColor="#FFDDBB" android:textSize="25sp"
+            android:text="@string/content_desc_invade" android:layout_marginLeft="8dp"
+            android:layout_marginTop="36dp"/>
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textColor="#FFBBBB" android:textSize="25sp"
+            android:text="@string/content_desc_virus" android:layout_marginLeft="8dp"
+            android:layout_marginTop="40dp"/>
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textColor="#DDBBFF" android:textSize="25sp"
+            android:text="@string/content_desc_laser" android:layout_marginLeft="8dp"
+            android:layout_marginTop="40dp"/>
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textColor="#BBBBFF" android:textSize="25sp"
+            android:text="@string/content_desc_exit" android:layout_marginLeft="8dp"
+            android:layout_marginTop="36dp"/>
 
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/bombButton"
-        android:contentDescription="@string/content_desc_bomb"
-        android:src="@mipmap/ic_launcher"/>
 
+    </LinearLayout>
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/invadeButton"
-        android:contentDescription="@string/content_desc_invade"
-        android:src="@mipmap/ic_launcher"/>
-
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/infectButton"
-        android:contentDescription="@string/content_desc_virus"
-        android:src="@mipmap/ic_launcher"/>
-
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/laserButton"
-        android:contentDescription="@string/content_desc_laser"
-        android:src="@mipmap/ic_launcher"/>
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/exitButton"
-        android:contentDescription="@string/content_desc_exit"
-        android:src="@mipmap/ic_launcher"/>
 </LinearLayout>

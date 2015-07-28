@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 
 public class AttackActivity extends ActionBarActivity {
@@ -15,6 +16,39 @@ public class AttackActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attack);
+
+        ImageButton bombButton = (ImageButton)findViewById(R.id.bombButton);
+        bombButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(AttackActivity.this, "Bombs Away!!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        ImageButton invadeButton = (ImageButton)findViewById(R.id.invadeButton);
+        invadeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(AttackActivity.this,"Troops Sent!",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        ImageButton infectButton = (ImageButton)findViewById(R.id.infectButton);
+        infectButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(AttackActivity.this,"Virus Spread!",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        ImageButton laserButton = (ImageButton)findViewById(R.id.laserButton);
+        laserButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(AttackActivity.this,"Laser Fired!",Toast.LENGTH_SHORT).show();
+            }
+        });
+
         ImageButton exitButton = (ImageButton)findViewById(R.id.exitButton);
         exitButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -22,6 +56,7 @@ public class AttackActivity extends ActionBarActivity {
                 finish();
             }
         });
+
     }
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
