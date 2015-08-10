@@ -1,31 +1,39 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:orientation="horizontal" >
+    android:layout_height="match_parent" android:orientation="horizontal"
+    android:background="@drawable/space">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools" android:layout_width="220px"
         android:layout_height="match_parent" android:orientation="vertical" >
         <Button
             android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="@string/button_name_colonies" android:id="@+id/coloniesButton" />
+            android:text="@string/button_name_colonies" android:id="@+id/coloniesButton"
+            android:textColor="#FFFFFF" android:alpha="0.5"/>
         <Button
             android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="@string/button_name_colonists" android:id="@+id/colonistsButton" />
+            android:text="@string/button_name_colonists" android:id="@+id/colonistsButton"
+            android:textColor="#FFFFFF" android:alpha="0.5"/>
         <Button
             android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="@string/button_name_bases" android:id="@+id/basesButton" />
+            android:text="@string/button_name_bases" android:id="@+id/basesButton"
+            android:textColor="#FFFFFF" android:alpha="0.5"/>
         <Button
             android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="@string/button_name_military" android:id="@+id/militaryButton" />
+            android:text="@string/button_name_military" android:id="@+id/militaryButton"
+            android:textColor="#FFFFFF" android:alpha="0.5"/>
         <Button
             android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="@string/button_name_ffon" android:id="@+id/coloniesFfon" />
+            android:text="@string/button_name_ffon" android:id="@+id/coloniesFfon"
+            android:textColor="#FFFFFF" android:alpha="0.5"/>
         <Button
             android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="@string/button_name_ffoff" android:id="@+id/coloniesFfoff" />
+            android:text="@string/button_name_ffoff" android:id="@+id/coloniesFfoff"
+            android:textColor="#FFFFFF" android:alpha="0.5"/>
         <Button
             android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="@string/button_name_done" android:id="@+id/doneButton" />
+            android:text="@string/button_name_done" android:id="@+id/doneButton"
+            android:textColor="#FFFFFF" android:alpha="0.5"/>
     </LinearLayout>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -35,32 +43,44 @@
         <EditText
             android:layout_width="match_parent" android:layout_height="wrap_content"
             android:id="@+id/editTextColonies" android:inputType="number" android:ems="12"
-            android:layout_marginTop="12dp" />
+            android:layout_marginTop="12dp" android:alpha="0.5"
+            android:typeface="monospace" android:background="#FFFFFF"
+            android:textStyle="bold" android:gravity="center"/>
 
         <EditText
             android:layout_width="match_parent" android:layout_height="wrap_content"
             android:id="@+id/editTextColonist" android:inputType="number" android:ems="12"
-            android:layout_marginTop="12dp"/>
+            android:layout_marginTop="38dp" android:alpha="0.5"
+            android:typeface="monospace" android:background="#FFFFFF"
+            android:textStyle="bold" android:gravity="center"/>
 
         <EditText
             android:layout_width="match_parent" android:layout_height="wrap_content"
             android:id="@+id/editTextBases" android:inputType="number" android:ems="12"
-            android:layout_marginTop="12dp"/>
+            android:layout_marginTop="32dp" android:alpha="0.5"
+            android:typeface="monospace" android:background="#FFFFFF"
+            android:textStyle="bold" android:gravity="center"/>
 
         <EditText
             android:layout_width="match_parent" android:layout_height="wrap_content"
             android:id="@+id/editTextMilitary" android:inputType="number" android:ems="12"
-            android:layout_marginTop="12dp"/>
+            android:layout_marginTop="24dp" android:alpha="0.5"
+            android:typeface="monospace" android:background="#FFFFFF"
+            android:textStyle="bold" android:gravity="center"/>
 
         <EditText
             android:layout_width="match_parent" android:layout_height="wrap_content"
             android:id="@+id/editTextForcefieldOn" android:inputType="text" android:ems="12"
-            android:layout_marginTop="12dp"/>
+            android:layout_marginTop="28dp" android:alpha="0.5"
+            android:background="#FFFFFF" android:textStyle="bold"
+            android:gravity="center"/>
 
         <EditText
             android:layout_width="match_parent" android:layout_height="wrap_content"
             android:id="@+id/editTextForcefieldOff" android:inputType="text" android:ems="12"
-            android:layout_marginTop="12dp"/>
+            android:layout_marginTop="34dp" android:alpha="0.5"
+            android:background="#FFFFFF" android:textStyle="bold"
+            android:gravity="center"/>
 
     </LinearLayout>
 

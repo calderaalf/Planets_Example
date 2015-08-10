@@ -2,10 +2,12 @@ package two.chapter.hello_world;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -19,6 +21,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         setStartUpWorldValues();
         setStartupScreenText();
+        setStartUpScreenAnim();
     }
 
     @Override
@@ -97,8 +100,13 @@ public class MainActivity extends Activity {
 
         TextView planetForceFieldValue = (TextView)findViewById(R.id.dataView8);
         planetForceFieldValue.setText(String.valueOf(earth.planetProtection));
+    }
 
-
+    private void setStartUpScreenAnim()
+    {
+        ImageView homePlanet = (ImageView)findViewById(R.id.imagePlanet);
+        AnimationDrawable forceFieldAnimation = (AnimationDrawable)homePlanet.getBackground();
+        forceFieldAnimation.start();
 
     }
 }

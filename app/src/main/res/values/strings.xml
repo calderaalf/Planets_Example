@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">Planets!!</string>
+    <string name="app_name">Planets!! - Home Screen</string>
+    <string name="activity_title_new_planet">Planets!! - Home Screen</string>
+    <string name="activity_title_config_planet">Planets!! - Configure Planet</string>
+    <string name="activity_title_travel_planet">Planets!! - Travel Planet</string>
+    <string name="activity_title_attack_planet">Planets!! - Attack Planet</string>
     <string name="hello_world">Hello world!</string>
 
     <string name="title_activity_new_planet">NewPlanet</string>
@@ -47,6 +51,7 @@
     <string name="content_desc_laser">Fire Laser at Planet</string>
 
     <string name="add_planet_caption">Click Planet to Add</string>
+
 
 
 </resources>

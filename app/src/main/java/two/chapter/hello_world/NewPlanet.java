@@ -1,13 +1,16 @@
 package two.chapter.hello_world;
 
+import android.graphics.drawable.TransitionDrawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.transition.Transition;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 
@@ -17,6 +20,10 @@ public class NewPlanet extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_planet);
+
+        final RelativeLayout newPlanetScreen = (RelativeLayout)findViewById(R.id.new_planet_screen);
+        final TransitionDrawable trans = (TransitionDrawable) getResources().getDrawable(R.drawable.tran_stars_galaxy);
+        newPlanetScreen.setBackground(trans);
 
         ImageView marsImage = (ImageView)findViewById(R.id.imageMars);
         Button doneButton = (Button)findViewById(R.id.doneAddingButton);
@@ -28,7 +35,7 @@ public class NewPlanet extends ActionBarActivity {
                 WorldGen mars = new WorldGen("Mars",642,3.7);
                 mars.setPlanetColonies(1);
                 Toast.makeText(NewPlanet.this,"Mars Created",Toast.LENGTH_SHORT).show();
-
+                trans.startTransition(5000);
             }
         });
 
