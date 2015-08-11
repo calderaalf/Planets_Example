@@ -1,12 +1,16 @@
 package two.chapter.hello_world;
 
+import android.graphics.drawable.AnimationDrawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 
@@ -18,6 +22,8 @@ public class AttackActivity extends ActionBarActivity {
         setContentView(R.layout.activity_attack);
 
         ImageButton bombButton = (ImageButton)findViewById(R.id.bombButton);
+        Animation rotateBomb  = AnimationUtils.loadAnimation(this,R.anim.anim_rot_bomb);
+        bombButton.startAnimation(rotateBomb);
         bombButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -25,7 +31,13 @@ public class AttackActivity extends ActionBarActivity {
             }
         });
 
+        ImageView invadeEffect = (ImageView)findViewById(R.id.invadeEffect);
+        AnimationDrawable transporterEffect = (AnimationDrawable)invadeEffect.getBackground();
+        transporterEffect.start();
+
         ImageButton invadeButton = (ImageButton)findViewById(R.id.invadeButton);
+        Animation alphaInvade = AnimationUtils.loadAnimation(this,R.anim.anim_alpha_invade);
+        invadeButton.startAnimation(alphaInvade);
         invadeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,7 +45,10 @@ public class AttackActivity extends ActionBarActivity {
             }
         });
 
+
         ImageButton infectButton = (ImageButton)findViewById(R.id.infectButton);
+        Animation scaleVirus = AnimationUtils.loadAnimation(this,R.anim.anim_scale_virus);
+        infectButton.startAnimation(scaleVirus);
         infectButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,6 +57,9 @@ public class AttackActivity extends ActionBarActivity {
         });
 
         ImageButton laserButton = (ImageButton)findViewById(R.id.laserButton);
+        Animation translateLaser = AnimationUtils.loadAnimation(this,R.anim.anim_trans_laser);
+        laserButton.startAnimation(translateLaser);
+
         laserButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
