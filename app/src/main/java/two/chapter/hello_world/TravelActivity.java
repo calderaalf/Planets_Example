@@ -1,5 +1,7 @@
 package two.chapter.hello_world;
 
+import android.widget.MediaController;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -18,15 +20,36 @@ public class TravelActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_travel);
+
+        Uri uriVideo = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.mars270);
         VideoView travelVideo =(VideoView)findViewById(R.id.travelVideoView);
-        travelVideo.setOnTouchListener(new View.OnTouchListener() {
+        travelVideo.setVideoURI(uriVideo);
+        MediaController videoMediaController = new MediaController(this);
+        videoMediaController.setAnchorView(travelVideo);
+        travelVideo.setMediaController(videoMediaController);
+        travelVideo.bringToFront();
+        travelVideo.requestFocus();
+        travelVideo.start();
+
+        Button travelButton = (Button)findViewById(R.id.travelButton);
+        travelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Toast.makeText(TravelActivity.this,"Going home!!",Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        });
+
+       /* travelVideo.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 Toast.makeText(TravelActivity.this,"Going Home!!!",Toast.LENGTH_LONG).show();
                 finish();
                 return true;
             }
-        });
+        }); */
+
     }
 
     @Override
