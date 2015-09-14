@@ -3,6 +3,7 @@ package two.chapter.hello_world;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
+import android.media.MediaPlayer;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -30,6 +31,10 @@ public class MainActivity extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+        setStartUpWorldValues();
+        setStartupScreenText();
+        setStartUpScreenAnim();
+        setStartUpScreenAudio();
         return true;
     }
 
@@ -112,6 +117,14 @@ public class MainActivity extends Activity {
         ImageView effectPlanet = (ImageView)findViewById(R.id.planetEffect);
         Animation animSetRing = AnimationUtils.loadAnimation(this,R.anim.anim_set_ring);
         effectPlanet.startAnimation(animSetRing);
+
+    }
+
+    private void setStartUpScreenAudio()
+    {
+        MediaPlayer audioPlayer = MediaPlayer.create(getApplicationContext(),R.raw.ambient);
+        audioPlayer.setLooping(true);
+        audioPlayer.start();
 
     }
 }

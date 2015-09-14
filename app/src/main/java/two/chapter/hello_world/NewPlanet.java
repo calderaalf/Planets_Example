@@ -1,6 +1,7 @@
 package two.chapter.hello_world;
 
 import android.graphics.drawable.TransitionDrawable;
+import android.media.MediaPlayer;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.transition.Transition;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 
 
 public class NewPlanet extends ActionBarActivity {
+    private MediaPlayer marsPlayer = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,7 @@ public class NewPlanet extends ActionBarActivity {
         newPlanetScreen.setBackground(trans);
 
         ImageView marsImage = (ImageView)findViewById(R.id.imageMars);
+        marsPlayer = MediaPlayer.create(this,R.raw.mars);
         Button doneButton = (Button)findViewById(R.id.doneAddingButton);
 
 
@@ -36,6 +39,7 @@ public class NewPlanet extends ActionBarActivity {
                 mars.setPlanetColonies(1);
                 Toast.makeText(NewPlanet.this,"Mars Created",Toast.LENGTH_SHORT).show();
                 trans.startTransition(5000);
+                marsPlayer.start();
             }
         });
 

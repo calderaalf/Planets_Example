@@ -1,5 +1,6 @@
 package two.chapter.hello_world;
 
+import android.media.MediaPlayer;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -12,12 +13,13 @@ import android.widget.TextView;
 
 
 public class ConfigActivity extends ActionBarActivity {
+    private MediaPlayer clickPlayer = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_config);
-
+        clickPlayer = MediaPlayer.create(getApplicationContext(),R.raw.click);
         EditText colonyText = (EditText)findViewById(R.id.editTextColonies);
         colonyText.setText("1", EditText.BufferType.EDITABLE);
         EditText colonistText = (EditText)findViewById(R.id.editTextColonist);
@@ -36,6 +38,7 @@ public class ConfigActivity extends ActionBarActivity {
         colonyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlayer.start();
                 finish();
             }
         });
@@ -44,6 +47,7 @@ public class ConfigActivity extends ActionBarActivity {
         colonistButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlayer.start();
                 finish();
             }
         });
@@ -51,6 +55,7 @@ public class ConfigActivity extends ActionBarActivity {
         baseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlayer.start();
                 finish();
             }
         });
@@ -58,6 +63,7 @@ public class ConfigActivity extends ActionBarActivity {
         militaryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlayer.start();
                 finish();
             }
         });
@@ -65,6 +71,7 @@ public class ConfigActivity extends ActionBarActivity {
         forceFieldButtonOn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlayer.start();
                 finish();
             }
         });
@@ -72,6 +79,7 @@ public class ConfigActivity extends ActionBarActivity {
         forceFieldButtonOff.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlayer.start();
                 finish();
             }
         });
@@ -79,6 +87,7 @@ public class ConfigActivity extends ActionBarActivity {
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlayer.start();
                 finish();
             }
         });

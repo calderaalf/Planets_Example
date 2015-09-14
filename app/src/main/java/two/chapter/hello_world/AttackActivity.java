@@ -1,6 +1,7 @@
 package two.chapter.hello_world;
 
 import android.graphics.drawable.AnimationDrawable;
+import android.media.MediaPlayer;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -15,11 +16,16 @@ import android.widget.Toast;
 
 
 public class AttackActivity extends ActionBarActivity {
+    private MediaPlayer bombPlayer = null;
+    private MediaPlayer transportPlayer = null;
+    private MediaPlayer virusPlayer = null;
+    private MediaPlayer laserPlayer = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attack);
+        setAudioPlayers();
 
         ImageButton bombButton = (ImageButton)findViewById(R.id.bombButton);
         Animation rotateBomb  = AnimationUtils.loadAnimation(this,R.anim.anim_rot_bomb);
@@ -28,13 +34,13 @@ public class AttackActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(AttackActivity.this, "Bombs Away!!", Toast.LENGTH_SHORT).show();
+                bombPlayer.start();
             }
         });
 
         ImageView invadeEffect = (ImageView)findViewById(R.id.invadeEffect);
         AnimationDrawable transporterEffect = (AnimationDrawable)invadeEffect.getBackground();
         transporterEffect.start();
-
         ImageButton invadeButton = (ImageButton)findViewById(R.id.invadeButton);
         Animation alphaInvade = AnimationUtils.loadAnimation(this,R.anim.anim_alpha_invade);
         invadeButton.startAnimation(alphaInvade);
@@ -42,6 +48,7 @@ public class AttackActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(AttackActivity.this,"Troops Sent!",Toast.LENGTH_SHORT).show();
+                transportPlayer.start();
             }
         });
 
@@ -53,17 +60,18 @@ public class AttackActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(AttackActivity.this,"Virus Spread!",Toast.LENGTH_SHORT).show();
+                virusPlayer.start();
             }
         });
 
         ImageButton laserButton = (ImageButton)findViewById(R.id.laserButton);
         Animation translateLaser = AnimationUtils.loadAnimation(this,R.anim.anim_trans_laser);
         laserButton.startAnimation(translateLaser);
-
         laserButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(AttackActivity.this,"Laser Fired!",Toast.LENGTH_SHORT).show();
+                laserPlayer.start();
             }
         });
 
@@ -104,5 +112,14 @@ public class AttackActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    private void setAudioPlayers(){
+        bombPlayer = MediaPlayer.create(getApplicationContext(),R.raw.blast);
+        transportPlayer = MediaPlayer.create(getApplicationContext(),R.raw.transport);
+        virusPlayer = MediaPlayer.create(getApplicationContext(),R.raw.virus);
+        laserPlayer = MediaPlayer.create(getApplicationContext(),R.raw.laser);
+
     }
 }
