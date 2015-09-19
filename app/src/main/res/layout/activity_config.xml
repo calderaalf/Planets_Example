@@ -34,6 +34,13 @@
             android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:text="@string/button_name_done" android:id="@+id/doneButton"
             android:textColor="#FFFFFF" android:alpha="0.5"/>
+        <Button
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/button_name_time" android:id="@+id/timeButton"
+            android:textColor="#FFFFFF" android:alpha="0.5"
+            />
+
+
     </LinearLayout>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -81,6 +88,8 @@
             android:layout_marginTop="34dp" android:alpha="0.5"
             android:background="#FFFFFF" android:textStyle="bold"
             android:gravity="center"/>
+
+
 
     </LinearLayout>
 

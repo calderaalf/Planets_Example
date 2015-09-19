@@ -53,6 +53,9 @@
     <string name="add_planet_caption">Click Planet to Add</string>
     <string name="travel_button_option">Return Home Screen</string>
 
-
+    <string name="time_caption_value">Home Planeth Earth Time</string>
+    <string name="time_button_value">Return to Planet Configuration</string>
+    <string name="activity_title_time_planet">HelloWorld -  Planeth Earth Time</string>
+    <string name="button_name_time">Atomic Clock</string>
 
 </resources>

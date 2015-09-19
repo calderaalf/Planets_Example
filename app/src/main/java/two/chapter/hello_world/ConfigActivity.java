@@ -1,5 +1,6 @@
 package two.chapter.hello_world;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
 
 
 public class ConfigActivity extends ActionBarActivity {
@@ -89,6 +91,15 @@ public class ConfigActivity extends ActionBarActivity {
             public void onClick(View v) {
                 clickPlayer.start();
                 finish();
+            }
+        });
+
+        Button timeButton = (Button)findViewById(R.id.timeButton);
+        timeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent callTimeIntent = new Intent(getApplicationContext(),TimePlanet.class);
+                startActivityForResult(callTimeIntent,0);
             }
         });
 

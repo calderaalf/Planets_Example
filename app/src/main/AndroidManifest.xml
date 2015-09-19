@@ -32,6 +32,10 @@
             android:name=".AttackActivity"
             android:label="@string/activity_title_attack_planet" >
         </activity>
+        <activity
+            android:name=".TimePlanet"
+            android:label="@string/activity_title_time_planet" >
+        </activity>
     </application>
 
 </manifest>
