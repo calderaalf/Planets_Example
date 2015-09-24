@@ -36,6 +36,7 @@
             android:name=".TimePlanet"
             android:label="@string/activity_title_time_planet" >
         </activity>
+        <service android:name=".MusicService" android:enabled="true" />
     </application>
 
 </manifest>
