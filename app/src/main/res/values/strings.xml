@@ -61,6 +61,8 @@
     <string name="start_button_value">Start Music Service</string>
     <string name="stop_button_value">Stop Music Service</string>
 
+    <string name="time_hint_value">Enter the number of seconds</string>
+    <string name="timer_button_value">Start Time Countdown</string>
 
 
 </resources>
