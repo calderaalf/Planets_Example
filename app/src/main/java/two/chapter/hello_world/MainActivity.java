@@ -65,6 +65,11 @@ public class MainActivity extends Activity {
                 this.startActivity(intent_attack);
             break;
 
+            case R.id.menu_contact:
+                Intent intent_contact = new Intent(this,AlienContact.class);
+                this.startActivity(intent_contact);
+            break;
+
             default:
                 return super.onOptionsItemSelected(item);
         }

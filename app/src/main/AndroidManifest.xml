@@ -9,6 +9,10 @@
     <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+
+
 
     <application
         android:allowBackup="true"
@@ -44,6 +48,11 @@
             android:name=".TimePlanet"
             android:label="@string/activity_title_time_planet" >
         </activity>
+        <activity
+            android:name=".AlienContact"
+            android:label="@string/activity_title_alien_contact" >
+        </activity>
+
 
         <service
             android:name=".MusicService"
